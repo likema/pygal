@@ -65,6 +65,15 @@ Properties                        Description
 ``plot_title_font_size``          The main title font size
 ``legend_font_size``              The legend font size
 ``no_data_font_size``             The no data font size
+``label_font_weight``             The label font weight
+``major_label_font_weight``       The major label font weight
+``value_font_weight``             The ``print_values`` font weight
+``value_label_font_weight``       The ``print_labels`` font weight
+``tooltip_font_weight``           The tooltip font weight
+``title_font_weight``             The title font weight
+``plot_title_font_weight``        The main title font weight
+``legend_font_weight``            The legend font weight
+``no_data_font_weight``           The no data font weight
 ``opacity``                       The opacity of chart element
 ``opacity_hover``                 The opacity of chart element on mouse hover
 ``transition``                    Define the global transition property for animation
