@@ -134,6 +134,9 @@ class Style(object):
                 if fn is None:
                     setattr(self, name, self.font_family)
 
+        if not self.value_colors:
+            self.value_colors = self.colors
+
     def get_colors(self, prefix, len_):
         """Get the css color list"""
 
