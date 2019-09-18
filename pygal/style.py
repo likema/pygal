@@ -38,6 +38,7 @@ class Style(object):
 
     # Monospaced font is highly encouraged
     font_family = ('Consolas, "Liberation Mono", Menlo, Courier, monospace')
+    font_weight = 'normal'
 
     label_font_family = None
     major_label_font_family = None
@@ -58,6 +59,16 @@ class Style(object):
     plot_title_font_size = 18
     legend_font_size = 14
     no_data_font_size = 64
+
+    label_font_weight = None
+    major_label_font_weight = None
+    value_font_weight = None
+    value_label_font_weight = None
+    tooltip_font_weight = None
+    title_font_weight = None
+    plot_title_font_weight = 'bold'
+    legend_font_weight = None
+    no_data_font_weight = None
 
     # Guide line dash array style
     guide_stroke_dasharray = '4,4'
@@ -118,6 +129,10 @@ class Style(object):
                     self._google_fonts.add(
                         getattr(self, name).split(',')[0].strip()
                     )
+            elif name.endswith('_font_weight'):
+                fn = getattr(self, name)
+                if fn is None:
+                    setattr(self, name, self.font_family)
 
     def get_colors(self, prefix, len_):
         """Get the css color list"""

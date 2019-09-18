@@ -26,49 +26,59 @@
   -webkit-user-select: none;
   -webkit-font-smoothing: antialiased;
   font-family: {{ style.font_family }};
+  font-weight: {{ style.font_weight }};
 }
 
 {{ id }}.title {
   font-family: {{ style.title_font_family }};
   font-size: {{ style.title_font_size }}px;
+  font-weight: {{ style.title_font_weight }}
 }
 
 {{ id }}.plot_title {
   font-family: {{ style.plot_title_font_family }};
   font-size: {{ style.plot_title_font_size }}px;
+  font-weight: {{ style.plot_title_font_weight }}
 }
 
 {{ id }}.legends .legend text {
   font-family: {{ style.legend_font_family }};
   font-size: {{ style.legend_font_size }}px;
+  font-weight: {{ style.legend_font_weight }}
 }
 
 {{ id }}.axis text {
   font-family: {{ style.label_font_family }};
   font-size: {{ style.label_font_size }}px;
+  font-weight: {{ style.label_font_weight }}
 }
 
 {{ id }}.axis text.major {
   font-family: {{ style.major_label_font_family }};
   font-size: {{ style.major_label_font_size }}px;
+  font-weight: {{ style.major_label_font_weight }}
 }
 
 {{ id }}.text-overlay text.value {
   font-family: {{ style.value_font_family }};
   font-size: {{ style.value_font_size }}px;
+  font-weight: {{ style.value_font_weight }}
 }
 
 {{ id }}.text-overlay text.label {
   font-family: {{ style.value_label_font_family }};
   font-size: {{ style.value_label_font_size }}px;
+  font-weight: {{ style.value_label_font_weight }}
 }
 
 {{ id }}.tooltip {
   font-family: {{ style.tooltip_font_family }};
   font-size: {{ style.tooltip_font_size }}px;
+  font-weight: {{ style.tooltip_font_weight }}
 }
 
 {{ id }}text.no_data {
   font-family: {{ style.no_data_font_family }};
   font-size: {{ style.no_data_font_size }}px;
+  font-weight: {{ style.no_data_font_weight }}
 }
