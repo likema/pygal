@@ -448,6 +448,8 @@ class Graph(PublicApi):
                         ) / 2,
                         width=self.legend_box_size,
                         height=self.legend_box_size,
+                        rx=self.legend_box_radius,
+                        ry=self.legend_box_radius,
                         class_="color-%d reactive" % serie_number
                     )
                 else:

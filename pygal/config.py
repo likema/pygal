@@ -290,6 +290,8 @@ class Config(CommonConfig):
 
     legend_box_size = Key(12, int, "Look", "Size of legend boxes")
 
+    legend_box_radius = Key(0, int, "Look", "Legend box radius")
+
     legend_shape = Key('rect', str, "Look", "Shape of legend boxes")
 
     rounded_bars = Key(
