@@ -435,19 +435,35 @@ class Graph(PublicApi):
                     class_='legend reactive activate-serie',
                     id="activate-serie-%d" % serie_number
                 )
-                self.svg.node(
-                    legend,
-                    'rect',
-                    x=col * x_step,
-                    y=1.5 * row * h + (
-                        self.style.legend_font_size - self.legend_box_size
-                        if self.style.legend_font_size > self.legend_box_size
-                        else 0
-                    ) / 2,
-                    width=self.legend_box_size,
-                    height=self.legend_box_size,
-                    class_="color-%d reactive" % serie_number
-                )
+
+                if self.legend_shape == 'rect':
+                    self.svg.node(
+                        legend,
+                        'rect',
+                        x=col * x_step,
+                        y=1.5 * row * h + (
+                            self.style.legend_font_size - self.legend_box_size
+                            if self.style.legend_font_size > self.legend_box_size
+                            else 0
+                        ) / 2,
+                        width=self.legend_box_size,
+                        height=self.legend_box_size,
+                        class_="color-%d reactive" % serie_number
+                    )
+                else:
+                    r = self.legend_box_size / 2
+                    self.svg.node(
+                        legend,
+                        'circle',
+                        r=r,
+                        cx=col * x_step + r,
+                        cy=1.5 * row * h + (
+                            self.style.legend_font_size - self.legend_box_size
+                            if self.style.legend_font_size > self.legend_box_size
+                            else 0
+                        ) / 2 + r,
+                        class_="color-%d reactive" % serie_number
+                    )
 
                 if isinstance(title, dict):
                     node = decorate(self.svg, legend, title)
