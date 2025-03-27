@@ -20,7 +20,7 @@
 from __future__ import division
 
 import sys
-from collections import Iterable
+from collections.abc import Iterable
 from datetime import datetime, timedelta, tzinfo
 
 if sys.version_info[0] == 3:
